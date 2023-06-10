@@ -34,7 +34,7 @@ export default function Example() {
             Don't have an account?
             <Typography
               as="a"
-              href="#signup"
+              href="/Register"
               variant="small"
               color="blue"
               className="ml-1 font-bold"
