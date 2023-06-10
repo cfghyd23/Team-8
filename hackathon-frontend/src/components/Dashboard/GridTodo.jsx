@@ -24,7 +24,9 @@ const KanbanBoard = () => {
 
   return (
     <div>
-    
+    <div className="container text-center  mt-6" style={{maxWidth:"500px",margin:"0 auto"}}>
+    <Progress className="m-4 w-50" value={50} label="Completed" />
+    </div>
     <div className="container text-center  mt-6" style={{maxWidth:"800px",margin:"0 auto"}}>
       <div className="flex justify-center">
         <div className=" p-4 bg-red-100 rounded-lg  mr-8 flex-1">
@@ -68,9 +70,11 @@ const KanbanBoard = () => {
         </div>
       </div>
     </div>
-    
-    
-    
+    <br></br>
+    <div className="container text-center p-4 bg-blue-100 rounded-lg " style={{maxWidth:"500px",margin:"0 auto"}}>
+    <h1>Great Work!! Keep Going</h1>
+    </div>
+    <br></br>
     </div>
   );
 }
