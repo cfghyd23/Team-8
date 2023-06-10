@@ -15,13 +15,25 @@ import {
     InboxIcon,
     PowerIcon,
   } from "@heroicons/react/24/solid";
+
    
   export default function Sidebar() {
+    const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeClick = () => {
+    setIsOpen(false);
+  };
     return (
       <Card className="fixed top-4 left-4 h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
         <div className="mb-2 p-4">
           <Typography variant="h5" color="blue-gray">
-            Sidebar
+            Sidebar <button onClick={toggleSidebar} id="close" className="e-btn close-btn">
+            {isOpen ? "Close Sidebar" : "Open Sidebar"}
+          </button>
           </Typography>
         </div>
         <List>
