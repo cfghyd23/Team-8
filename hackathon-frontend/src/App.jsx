@@ -1,16 +1,20 @@
 import FirstPage from "./components/FirstPage/FirstPage";
+import Sidebar from './components/Dashboard/Sidebar';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
+    
     <BrowserRouter>
+    
     <Routes>
       <Route path="/">
         <Route index element={<FirstPage />} />
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
+        <Route path="/dashboard" element={<Sidebar />}></Route>
       </Route>
-      
+
     </Routes>
   </BrowserRouter>
+    // <Sidebar />
   );
 }
 
