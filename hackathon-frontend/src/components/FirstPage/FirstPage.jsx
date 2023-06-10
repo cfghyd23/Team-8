@@ -4,7 +4,7 @@ import React from 'react';
 
 const FirstPage = () => {
   return (
-    <div>
+    <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '15%' }}>
     <Card1 />
     <Card2 />
     
