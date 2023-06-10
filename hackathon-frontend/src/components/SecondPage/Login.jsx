@@ -1,35 +1,31 @@
+import React from 'react';
 import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Typography,
-    Input,
-    Button,
-  } from "@material-tailwind/react";
-   
-  export default function Example() {
-    return (
-    //   Creating card for LOgin
-      <Card className="w-96 m-10">
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Input,
+  Button,
+} from '@material-tailwind/react';
 
-        {/* Creating CardHeader */}
+export default function Example() {
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <Card className="w-96">
         <CardHeader
-            variant="gradient"
-            color="blue"
-            className="mb-4 flex justify-center items-center h-15">
+          variant="gradient"
+          color="blue"
+          className="mb-4 flex justify-center items-center h-15"
+        >
           <Typography variant="h3" color="white">
             Login
           </Typography>
         </CardHeader>
-
-        {/* Creating CardBody */}
         <CardBody className="flex flex-col gap-4">
           <Input label="Email" size="lg" />
           <Input label="Password" size="lg" />
         </CardBody>
-
-        {/* Creating CardFooter */}
         <CardFooter className="pt-0">
           <Button variant="gradient" fullWidth>
             Sign In
@@ -41,12 +37,13 @@ import {
               href="/Register"
               variant="small"
               color="blue"
-              className="ml-1 font-bold">
-              Sign up
+              className="ml-1 font-bold"
+            >
+              Register
             </Typography>
           </Typography>
         </CardFooter>
-
       </Card>
-    );
-  }
+    </div>
+  );
+}
