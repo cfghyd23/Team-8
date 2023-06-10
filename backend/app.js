@@ -16,6 +16,9 @@ app.use(cors());
 //we link the router files to make our route easy
 import connectDB from "./db/connect.js";
 
+import authRoutes from "./routes/auth";
+app.use("/api/v1/auth", authRoutes());
+
 const PORT = process.env.PORT || 3001;
 const start = async () => {
   try {
