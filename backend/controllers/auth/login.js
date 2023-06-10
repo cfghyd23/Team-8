@@ -1,30 +1,28 @@
 import User from "../../models/User.js";
-
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 const login = async (req, res) => {
   try {
-    const { firstName, email, password } = req.body;
+    const { email, password } = req.body;
 
-    if (!firstName || !password || !email)
-      res
-        .status(404)
-        .json({ message: "Thou shalt not pass. Missing Information." });
-
+    // Check if the email exists
     const user = await User.findOne({ email });
-    if (!user) res.status(404).json({ message: "Thou does not exist." });
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
 
-    const passcorrect = await User.comparePassword(password);
+    // Compare the password
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) {
+      return res.status(401).json({ error: "Invalid password" });
+    }
 
-    if (!passcorrect)
-      res
-        .status(401)
-        .json({ message: "Thou art an imposter. Incorrect Password." });
-    else res.status(200).json({ user: user });
+    // Generate JWT token
+    const token = jwt.sign({ userId: user._id }, "your_secret_key");
+
+    res.status(200).json({ token, userId: user._id });
   } catch (error) {
-    res.status(400).json({
-      message:
-        "EVIL MEOW INCORPORATED IS SAD TO INFORM THAT THERE HAS BEEN SOME ERROR. WE WILL BE BACK WITH YOU SHORTLY.",
-      error: error.message,
-    });
+    res.status(500).json({ error: error.message });
   }
 };
 

@@ -4,42 +4,48 @@ import bcrypt from "bcryptjs";
 
 const UserSchema = new mongoose.Schema(
   {
-    firstName: {
+    name: {
       type: String,
-      required: [true, "Tell me your name. Please. Im Not Good with faces :(."],
-      max: 50,
+      required: true,
+      unique: true,
     },
-
-    lastName: {
-      type: String,
-      required: [
-        true,
-        "Tell me your name. Please. Im Not Good with first names. :(.",
-      ],
-      max: 50,
-    },
-
     email: {
       type: String,
+      required: true,
       unique: true,
-      required: [
-        true,
-        "Please give me your Email I promise to not send you evil meow pics",
-      ],
-      validate: {
-        validator: validator.isEmail,
-        message:
-          "Please provide valid email. How else am i supposed to send you pics of evil meow",
-      },
     },
-
+    phone: {
+      type: Number,
+      required: true,
+      unique: true,
+    },
     password: {
       type: String,
-      required: [
-        true,
-        "Please provide password. Secrecy is paramount for evil meow.",
-      ],
-      minlength: 6,
+      required: true,
+    },
+    dob: {
+      type: Date,
+      required: true,
+    },
+    gender: {
+      type: String,
+      required: true,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
+    state: {
+      type: String,
+      required: true,
+    },
+    segment: {
+      type: String,
+      required: true,
+    },
+    cause: {
+      type: String,
+      required: true,
     },
   },
   { timestamps: true }
