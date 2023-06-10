@@ -5,8 +5,17 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Example() {
+
+  
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+      let path = `/login`; 
+      navigate(path);
+    }
   return (
     <Card className="mt-6 w-96 m-3">
       <CardBody>
@@ -18,7 +27,7 @@ export default function Example() {
         </Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button>Login</Button>
+        <Button onClick={routeChange}>Login</Button>
       </CardFooter>
     </Card>
   );

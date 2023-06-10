@@ -1,6 +1,7 @@
 import FirstPage from "./components/FirstPage/FirstPage";
 import Sidebar from './components/Dashboard/Sidebar';
 import LoginPage from "./components/SecondPage/Login";
+import Register from "./components/SecondPage/Register";
 //import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 const Layout = ({children}) => {
@@ -25,8 +26,9 @@ function App() {
       <Routes>
         {/* Replace FirstPage with dash components */}
       <Route path="/dashboard" Component={FirstPage} ></Route> 
-    <Route path="/LandingPage" Component={FirstPage}></Route>
+    <Route path="/" Component={FirstPage}></Route>
     <Route path="/Login" Component={LoginPage}></Route>
+    <Route path="/Register" Component={Register}></Route>
     </Routes>
   </Layout>
   </BrowserRouter>    
