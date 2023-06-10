@@ -71,6 +71,15 @@ export default function Example() {
         cause: cause
       }
     }).then((response) => {
+      // axios({
+      //   method: 'post',
+      //   url: 'https://marpu-email-service.onrender.com/mail',
+      //   data: {
+      //     email : email,
+      //     body : `hi ${username}`,
+      //     subject : "Welcome to the platform",
+      //     }
+      // }).then((response) => {console.log(response)}).then((error) => {console.log(error)})
       window.location = "/overview";
       }).then ((error) => {alert(error.message);});
   }
