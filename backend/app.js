@@ -1,34 +1,27 @@
-import express from "express";
-import bodyParser from "body-parser";
-import morgan from "morgan";
-import cors from "cors";
-import dotenv from "dotenv";
-import debug from "debug";
-
-dotenv.config();
+const express = require('express');
+const nodeMailer = require('nodemailer');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const app = express();
+const db = require('./db/db');
+dotenv.config({ path: './config.env' });
+const userRouter = require('./routers/user-routes');
+// const fundraiserRouter = require('./routers/fundraising');
+// const orientationRouter = require('./routers/orientation');
+// const internshipRouter = require('./routers/internship');
+const causeRouter = require('./routers/cause');
+const PORT = process.env.PORT;
+
+
 app.use(express.json());
 
-app.use(morgan("common"));
-app.use(bodyParser.json({ limit: "30mb", extended: true }));
-app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.use(cors());
+// Routes
+app.use('/api/users', userRouter);
+// app.use('/api/fundraisers', fundraiserRouter);
+// app.use('/api/orientation', orientationRouter);
+// app.use('/api/internship', internshipRouter);
+app.use('/api/cause', causeRouter);
 
-//we link the router files to make our route easy
-import connectDB from "./db/connect.js";
-import authRoutes from "./routes/auth.js";
-app.use("/api/v1/auth", authRoutes);
-
-const PORT = process.env.PORT || 3001;
-const start = async () => {
-  try {
-    await connectDB(process.env.MONGO_URL);
-    app.listen(PORT, () =>
-      console.log(`Server is listening on port ${PORT}...`)
-    );
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-start();
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
