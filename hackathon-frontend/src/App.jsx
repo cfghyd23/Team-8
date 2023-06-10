@@ -1,9 +1,16 @@
 import FirstPage from "./components/FirstPage/FirstPage";
 function App() {
   return (
-    <div className="bg-blue-500">
-      <FirstPage />
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/">
+        <Route index element={<FirstPage />} />
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+      </Route>
+      
+    </Routes>
+  </BrowserRouter>
   );
 }
 
