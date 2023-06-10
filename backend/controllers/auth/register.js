@@ -1,6 +1,6 @@
-import User from "../../models/User";
+import User from "../../models/User.js";
 
-export const register = async (req, res) => {
+const register = async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body;
 
@@ -27,3 +27,5 @@ export const register = async (req, res) => {
     });
   }
 };
+
+export default register;
