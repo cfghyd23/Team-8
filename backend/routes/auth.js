@@ -7,4 +7,4 @@ import { login, register } from "../controllers/auth";
 router.post("/register", register);
 router.post("/login", login);
 
-module.exports = router;
+export default router;
