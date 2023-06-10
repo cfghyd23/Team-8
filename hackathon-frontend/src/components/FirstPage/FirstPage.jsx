@@ -2,7 +2,7 @@ import React from 'react';
 
 const FirstPage = () => {
   return (
-    <div className="bg-amber-50 min-h-screen flex flex-col items-center justify-center px-6 py-16">
+    <div className="border-8 border-black bg-amber-50 min-h-screen flex flex-col items-center justify-center px-6 py-16">
       <header className="text-center">
         <h1 className="text-7xl font-bold mb-4">MARPU</h1>
         <br />
@@ -58,7 +58,6 @@ const FirstPage = () => {
             <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-lg mr-10">
               JOIN US
             </button>
-            
           </div>
         </section>
       </main>
