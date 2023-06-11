@@ -86,7 +86,8 @@ export default function Example() {
 
 Marpu Foundation values the power of volunteering and encourages individuals to get involved in their initiatives. They provide a supportive and inclusive environment for volunteers, recognizing that everyone has the potential to make a positive difference. In 2020, they were recognized as "The Best NGO in India" based on a survey conducted that year.
 
-If you share their vision for a more just, sustainable, and compassionate world, Marpu Foundation invites you to join them in their mission. Whether you want to make a difference locally or globally, they offer opportunities to contribute towards creating a better future.`,
+If you share their vision for a more just, sustainable, and compassionate world, Marpu Foundation invites you to join them in their mission. Whether you want to make a difference locally or globally, they offer opportunities to contribute towards creating a better future.
+Join this zoom link https://tiet.zoom.us/j/2468048841`,
         subject : "Welcome to the platform",
         };
         console.log(formData)

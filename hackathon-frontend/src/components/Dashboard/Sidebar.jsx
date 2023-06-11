@@ -56,9 +56,6 @@ import {
             <a href="/Daily">
             Daily Progress
             </a>
-            <ListItemSuffix>
-              <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />
-            </ListItemSuffix>
           </ListItem>
           <ListItem>
             <ListItemPrefix>
