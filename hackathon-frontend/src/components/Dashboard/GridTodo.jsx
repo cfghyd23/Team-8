@@ -72,6 +72,9 @@ const KanbanBoard = () => {
     </div>
     <br></br>
     <div className="container text-center p-4 bg-blue-100 rounded-lg " style={{maxWidth:"500px",margin:"0 auto"}}>
+    <h1>Funds Collected Till Now </h1>
+    </div>
+    <br></br><div className="container text-center p-4 bg-purple-100 rounded-lg " style={{maxWidth:"500px",margin:"0 auto"}}>
     <h1>Great Work!! Keep Going</h1>
     </div>
     <br></br>
