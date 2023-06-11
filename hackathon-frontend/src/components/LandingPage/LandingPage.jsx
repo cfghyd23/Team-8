@@ -9,7 +9,7 @@ const LandingPage = () => {
     navigate(path);
   }
   return (
-    <div className="border-8 border-black bg-amber-50 min-h-screen flex flex-col items-center justify-center px-6 py-16">
+    <div className="border-8 border-black bg-blue-50 min-h-screen flex flex-col items-center justify-center px-6 py-16">
       <header className="text-center">
         <h1 className="text-7xl font-bold mb-4">MARPU</h1>
         <br />
@@ -62,7 +62,7 @@ const LandingPage = () => {
             If you are passionate about making a difference, join us in our mission!
           </p>
           <div className="flex justify-center mt-4">
-            <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-lg mr-10" onClick={routeChange}>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg mr-10" onClick={routeChange}>
               JOIN US
             </button>
           </div>
