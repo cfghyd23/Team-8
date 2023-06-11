@@ -29,7 +29,7 @@ const CauseSchema = new mongoose.Schema(
       ref: "User",
     },
     status: {
-      type: Boolean,
+      type: String,
     },
     tasks: {
       type: [String],
