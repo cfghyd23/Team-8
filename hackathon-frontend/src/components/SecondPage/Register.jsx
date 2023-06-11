@@ -73,7 +73,20 @@ export default function Example() {
     }).then((response) => {
       let formData = {
         email : email,
-        body : `hi ${username}`,
+        body : `hi ${username},
+        Marpu is an organization founded by Mr. Kadiri Raghu Vamsi, a National Youth Awardee. The word "Marpu" means "the change" and reflects the organization's mission to bring about positive transformations in society. The foundation is committed to various causes and operates based on four primary themes: environmental sustainability, economic development, social development, and partnerships for the goal.
+
+1. Environmental Sustainability: Marpu Foundation recognizes the importance of preserving and protecting the environment. They actively promote sustainable practices and initiatives that contribute to a cleaner and greener planet. This may involve projects related to renewable energy, waste management, conservation of natural resources, and raising awareness about environmental issues.
+
+2. Economic Development: Marpu Foundation focuses on fostering economic growth and development, particularly in marginalized communities. They work towards empowering individuals through skill development, entrepreneurship, and access to resources and opportunities. By promoting economic inclusion, they aim to reduce poverty and create sustainable livelihoods.
+
+3. Social Development: Marpu Foundation is dedicated to social development and improving the lives of disadvantaged groups. They strive to address issues such as education, healthcare, gender equality, and social justice. Through various initiatives, they aim to uplift communities, provide equal opportunities, and advocate for the rights of marginalized individuals.
+
+4. Partnerships for the Goal: Collaboration is a crucial aspect of Marpu Foundation's approach. They actively seek partnerships and alliances with other organizations, governments, and stakeholders to maximize their impact and achieve their goals. By fostering meaningful partnerships, they can pool resources, expertise, and ideas to address complex societal challenges more effectively.
+
+Marpu Foundation values the power of volunteering and encourages individuals to get involved in their initiatives. They provide a supportive and inclusive environment for volunteers, recognizing that everyone has the potential to make a positive difference. In 2020, they were recognized as "The Best NGO in India" based on a survey conducted that year.
+
+If you share their vision for a more just, sustainable, and compassionate world, Marpu Foundation invites you to join them in their mission. Whether you want to make a difference locally or globally, they offer opportunities to contribute towards creating a better future.`,
         subject : "Welcome to the platform",
         };
         console.log(formData)
@@ -91,7 +104,7 @@ export default function Example() {
   }
   
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center mt-20 mb-20 h-auto">
       <Card color="transparent" shadow={false}>
         <Typography variant="h4" color="blue-gray">
           Register
