@@ -57,7 +57,7 @@ export default function Example() {
     axios({
       
       method: 'post',
-      url: 'http://localhost:5000/api/v1/auth/register',
+      url: 'http://localhost:5000/api/users/signup',
       data: {
         name: username,
         email: email,

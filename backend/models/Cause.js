@@ -15,6 +15,14 @@ const CauseSchema = new mongoose.Schema(
     target: {
       type: Number,
       required: true,
+    }, 
+    collected: {
+      type: Number,
+      required: true,
+    }, 
+    days: {
+      type: Number,
+      required: true,
     },
     mentor: {
       type: mongoose.Schema.ObjectId,

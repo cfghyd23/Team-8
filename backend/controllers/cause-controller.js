@@ -4,7 +4,7 @@ const Cause = require('../models/Cause');
 // Create a cause
 exports.createCause = async (req, res) => {
   try {
-    const { segment, target, mentor, status, tasks , user } = req.body;
+    const { segment, target, mentor, status, tasks , user, collected, days } = req.body;
     
     
 
@@ -13,12 +13,12 @@ exports.createCause = async (req, res) => {
       segment,
       user, // Assuming the authenticated user's ID is stored in req.user._id
       target,
+      collected,
+      days,
       mentor,
       status,
       tasks,
     });
-
-    console.log(mentor)
 
     res.status(201).json(cause);
   } catch (error) {
@@ -87,4 +87,16 @@ exports.deleteCauseById = async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }
+};
+
+
+
+exports.donate = async (req, res) => {
+  try {
+    const { amount, email, id } = req.body;
+    const cause = await Cause.findById(id);
+    console.log(cause);
+  } catch (error) {
+    res.send(404).json({ error: error.message });
+  }
 };
