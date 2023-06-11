@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import FourCards from "../Segments/FourCards";
 
 const LandingPage = () => {
   let navigate = useNavigate(); 
@@ -8,7 +9,7 @@ const LandingPage = () => {
     navigate(path);
   }
   return (
-    <div className="border-8 border-black bg-amber-50 min-h-screen flex flex-col items-center justify-center px-6 py-16">
+    <div className="border-8 border-black bg-blue-50 min-h-screen flex flex-col items-center justify-center px-6 py-16">
       <header className="text-center">
         <h1 className="text-7xl font-bold mb-4">MARPU</h1>
         <br />
@@ -26,9 +27,9 @@ const LandingPage = () => {
               <h3 className="text-xl font-semibold mb-2">Step 1</h3>
               <p className="text-lg px-4">
                 <ul className="list-disc list-inside text-left">
-                  <li>Sign-Up and provide your details. </li>
-                  <li>Select an internship role.</li>
-                  <li>You will receive an automated e-mail for password to log-in to your dashboard.</li>
+                  <li>Sign Up and Provide your details. </li>
+                  <li>Select a cause from the details given below.</li>
+                  <li>You will receive an automated e-mail regarding the on-boarding process.</li>
                 </ul>
               </p>
             </div>
@@ -37,9 +38,9 @@ const LandingPage = () => {
               <p className="text-lg">
                 <ul className="list-disc list-inside text-left">
                   <li>You get an e-mail having zoom meeting link for Day 1 Orientation</li>
-                  <li>Checklist daily tasks to reach your goal.</li>
-                  <li>You get tips and reminders.</li>
-                  <li>Track your progress and tasks.</li>
+                  <li>Complete the daily tasks to reach your goal.</li>
+                  <li>You get daily tips and reminders via e-mail.</li>
+                  <li>Check your progress and status of the tasks.</li>
                 </ul>
               </p>
             </div>
@@ -47,9 +48,9 @@ const LandingPage = () => {
               <h3 className="text-xl font-semibold mb-2">Step 3</h3>
               <p className="text-lg">
                 <ul className="list-disc list-inside text-left">
-                  <li>Hurray! Achieve your goal get cool swags.</li>
-                  <li>Perks include certificates, LOR and goodies.</li>
-                  <li>Be proud of yourself as you contributed for a social cause.</li>
+                  <li>Certificates will be sent via e-mail after the goal is reached.</li>
+                  <li>Along which there are many perks</li>
+                  <li>Perks include LOR and goodies.</li>
                 </ul>
               </p>
             </div>
@@ -61,11 +62,16 @@ const LandingPage = () => {
             If you are passionate about making a difference, join us in our mission!
           </p>
           <div className="flex justify-center mt-4">
-            <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-lg mr-10" onClick={routeChange}>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg mr-10" onClick={routeChange}>
               JOIN US
             </button>
           </div>
         </section>
+        <h2 className="text-center text-3xl font-bold mb-4 py-8">Themes</h2>
+          <p className="text-center text-lg text-gray-600">
+            Choose from any of these available themes to apply for the internship role
+          </p>
+        <FourCards />
       </main>
       <footer className="mt-8 flex justify-center">
 

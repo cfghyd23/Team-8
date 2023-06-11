@@ -1,5 +1,6 @@
 const express = require('express');
 const nodeMailer = require('nodemailer');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const app = express();
@@ -14,6 +15,8 @@ const PORT = process.env.PORT;
 
 
 app.use(express.json());
+
+app.use(cors());
 
 // Routes
 app.use('/api/users', userRouter);

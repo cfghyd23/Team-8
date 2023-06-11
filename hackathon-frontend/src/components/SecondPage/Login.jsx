@@ -46,8 +46,8 @@ export default function Example() {
       }).then ((error) => {alert(error.message);});
   }
   return (
-    <div className="flex justify-center items-center h-screen">
-      <Card className="w-96">
+    <div className="flex justify-center items-center h-screen bg-blue-50">
+      <Card className="w-96 opacity-80">
         <CardHeader
           variant="gradient"
           color="blue"
