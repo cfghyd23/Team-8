@@ -4,6 +4,7 @@ import LoginPage from "./components/SecondPage/Login";
 import Register from "./components/SecondPage/Register";
 import allCauses from "./components/Dashboard/allCauses";
 import LandingPage from "./components/LandingPage/LandingPage";
+import Segments from "./components/Segments/FourCards";
 
 //import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
@@ -39,7 +40,7 @@ function App() {
       <Routes>
         {/* Replace FirstPage with dash components */}
         <Route path="/AllCauses" Component={allCauses} ></Route> 
-      <Route path="/Overview" Component={Overview} ></Route> 
+      <Route path="/Overview" Component={Segments} ></Route> 
     <Route path="/" Component={LandingPage}></Route>
     <Route path="/Home" Component={FirstPage}></Route>
     
