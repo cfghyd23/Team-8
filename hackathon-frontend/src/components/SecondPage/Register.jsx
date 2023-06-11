@@ -91,7 +91,7 @@ export default function Example() {
   }
   
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center mt-20 mb-20 h-auto">
       <Card color="transparent" shadow={false}>
         <Typography variant="h4" color="blue-gray">
           Register
