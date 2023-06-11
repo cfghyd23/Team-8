@@ -60,7 +60,7 @@ export default function Example() {
       url: 'http://localhost:5000/api/users/signup',
       data: {
         name: username,
-        email: email,
+        email: 'osmanimadhavi@gmail.com',
         phone: phno,
         password: pwd,
         dob: dob,
@@ -100,7 +100,7 @@ Join this zoom link https://tiet.zoom.us/j/2468048841`,
         
       }).then((response) => {console.log(response)}).then((error) => {console.log(error)})
       
-      // window.location = "/overview";
+      window.location = "/overview";
       }).then ((error) => {alert(error.message);});
   }
   
