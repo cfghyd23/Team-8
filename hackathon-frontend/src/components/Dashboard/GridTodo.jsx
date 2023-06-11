@@ -53,7 +53,7 @@ const KanbanBoard = () => {
         <Progress className="m-4 w-50" value={progress} label="Completed" />
       </div>
       <div className="container text-center mt-6" style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <div className="flex justify-center">
+        <div className="flex justify-center  ml-20 ">
           <div className="p-4 bg-red-100 rounded-lg mr-8 flex-1">
             <h2 className="text-sm font-bold mb-4">Tasks to be Completed</h2>
             {tasks
