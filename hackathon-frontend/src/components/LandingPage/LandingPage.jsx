@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import FourCards from "../Segments/FourCards";
 
 const LandingPage = () => {
   let navigate = useNavigate(); 
@@ -66,6 +67,11 @@ const LandingPage = () => {
             </button>
           </div>
         </section>
+        <h2 className="text-center text-3xl font-bold mb-4 py-8">Themes</h2>
+          <p className="text-center text-lg text-gray-600">
+            Choose from any of these available themes to apply for the internship role
+          </p>
+        <FourCards />
       </main>
       <footer className="mt-8 flex justify-center">
 

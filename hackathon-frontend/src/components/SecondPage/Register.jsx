@@ -57,7 +57,7 @@ export default function Example() {
     axios({
       
       method: 'post',
-      url: 'http://localhost:5000/api/v1/auth/register',
+      url: 'http://localhost:5000/api/users/signup',
       data: {
         name: username,
         email: email,
@@ -71,16 +71,22 @@ export default function Example() {
         cause: cause
       }
     }).then((response) => {
-      // axios({
-      //   method: 'post',
-      //   url: 'https://marpu-email-service.onrender.com/mail',
-      //   data: {
-      //     email : email,
-      //     body : `hi ${username}`,
-      //     subject : "Welcome to the platform",
-      //     }
-      // }).then((response) => {console.log(response)}).then((error) => {console.log(error)})
-      window.location = "/overview";
+      let formData = {
+        email : email,
+        body : `hi ${username}`,
+        subject : "Welcome to the platform",
+        };
+        console.log(formData)
+      axios.post('https://marpu-email-service.onrender.com/mail', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data' // Make sure to set the correct content type
+        },
+        method: 'post',
+        url: 'https://marpu-email-service.onrender.com/mail',
+        
+      }).then((response) => {console.log(response)}).then((error) => {console.log(error)})
+      
+      // window.location = "/overview";
       }).then ((error) => {alert(error.message);});
   }
   
